@@ -1,4 +1,4 @@
-message = input('Enter encrypted message to hack it')
+message = input('Enter encrypted message to hack it - ')
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
 
 for key in range(len(SYMBOLS)):
