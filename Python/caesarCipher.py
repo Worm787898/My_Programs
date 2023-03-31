@@ -1,12 +1,12 @@
 import pyperclip
 
-message = 'This is my secret message.'
+message = input('Enter message : ')
 
-key = 13
+key = int(input('Enter crypt-key : '))
 
-mode = 'encrypt' # задать 'encrypt' или 'decrypt'
+mode = input('Choose: \n encrypt or decrypt : ') # задать 'encrypt' или 'decrypt'
 
-SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
+SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.`~@#$%^&*()_+-=[]}{|;:<>,/'
 
 translated = ''
 
@@ -26,5 +26,6 @@ for symbol in message:
     else:
         translated = translated + symbol
 
+print('Message translated and copyed to clipboard:')
 print(translated)
 pyperclip.copy(translated)
