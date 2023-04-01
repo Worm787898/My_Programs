@@ -1,5 +1,5 @@
 message = input('Enter encrypted message to hack it - ')
-SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
+SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.`~@#$%^&*()_+-=[]}{|;:<>,/'
 
 for key in range(len(SYMBOLS)):
     translated = ''
@@ -10,7 +10,7 @@ for key in range(len(SYMBOLS)):
             translatedIndex = symbolIndex - key
 
             if translatedIndex < 0:
-                translatedIndex = translatedIndex + len(SYMBOLS)
+                translatedIndex = translatedIndex + len(SYMBOLS) 
 
             translated = translated + SYMBOLS[translatedIndex]
         else:

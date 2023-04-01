@@ -1,4 +1,5 @@
-x = 1
-while True:
-    print(x)
-    x += x
+import Converter
+
+x = input()
+y = Converter.main()
+print(y)
