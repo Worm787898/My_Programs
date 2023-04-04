@@ -1,5 +1,4 @@
 import time
-import pyperclip
 
 def decimal_to_binary(val):
     nums = []
