@@ -17,7 +17,10 @@ class Ui_Converter(object):
         try:
             val = int(self.lineEdit.text())
             nums = []
-            while True:          
+            while True:
+                if val == 0:
+                    self.lineEdit_2.setText('0')
+                    return          
                 if val == 1:
                     nums.append(1)
                     break
@@ -135,17 +138,17 @@ class Ui_Converter(object):
         try:
             val = self.lineEdit.text()
             def letter_to_number(letter):
-                if letter == 'A':
+                if (letter == 'A') or (letter == 'a'):
                     number = 10
-                elif letter == 'B':
+                elif (letter == 'B') or (letter == 'b'):
                     number = 11
-                elif letter == 'C':
+                elif (letter == 'C') or (letter == 'c'):
                     number = 12
-                elif letter == 'D':
+                elif (letter == 'D') or (letter == 'd'):
                     number = 13
-                elif letter == 'E':
+                elif (letter == 'E') or (letter == 'e'):
                     number = 14
-                elif letter == 'F':
+                elif (letter == 'F') or (letter == 'f'):
                     number = 15
                 return number
             
@@ -209,7 +212,7 @@ class Ui_Converter(object):
         self.pushButton_8.setGeometry(QtCore.QRect(330, 280, 81, 21))
         self.pushButton_8.setObjectName("pushButton_8")
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(20, 375, 241, 21))
+        self.label_4.setGeometry(QtCore.QRect(20, 375, 260, 21))
         self.label_4.setObjectName("label_4")
         Converter.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(Converter)
@@ -247,7 +250,7 @@ class Ui_Converter(object):
         self.pushButton_7.setText(_translate("Converter", "16 -> 10"))
         self.label_3.setText(_translate("Converter", "Введите число"))
         self.pushButton_8.setText(_translate("Converter", "Копировать"))
-        self.label_4.setText(_translate("Converter", "by Worm787898 https://github.com/Worm787898"))
+        self.label_4.setText(_translate("Converter", "by Worm787898    https://github.com/Worm787898"))
 
 
 if __name__ == "__main__":
