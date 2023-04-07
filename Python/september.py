@@ -1,1 +1,1 @@
-print(int('0022'))
+print(int('2+2'))
